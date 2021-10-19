@@ -1,7 +1,13 @@
+import React from "react";
+import Box from "./Box";
 import "./App.css";
 
 const App = () => {
-  return <div>Hello W0rld!</div>;
+  return (
+    <div>
+      <Box />
+    </div>
+  );
 };
 
 export default App;
