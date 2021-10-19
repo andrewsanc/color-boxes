@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import "./Box.css";
 
-const Box = () => {
+const Box = ({ colors }) => {
   const [color, setColor] = useState(
-    Box.defaultProps.colors[
-      Math.floor(Box.defaultProps.colors.length * Math.random())
-    ]
+    colors[Math.floor(colors.length * Math.random())]
   );
 
   const changeColor = () => {
-    let newColor =
-      Box.defaultProps.colors[
-        Math.floor(Box.defaultProps.colors.length * Math.random())
-      ];
+    let newColor = colors[Math.floor(colors.length * Math.random())];
 
     if (newColor !== color) {
       setColor(newColor);
