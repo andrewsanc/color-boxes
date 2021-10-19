@@ -9,10 +9,17 @@ const Box = () => {
   );
 
   const changeColor = () => {
-    console.log("change me");
-  };
+    let newColor =
+      Box.defaultProps.colors[
+        Math.floor(Box.defaultProps.colors.length * Math.random())
+      ];
 
-  console.log(Box.defaultProps);
+    if (newColor !== color) {
+      setColor(newColor);
+    } else {
+      changeColor();
+    }
+  };
 
   return (
     <div
